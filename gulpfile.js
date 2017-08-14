@@ -19,7 +19,10 @@ gulp.task('pug', function buildHTML() {
 gulp.task('sass', function () {
 	return gulp.src('app/sass/main.sass')
 	.pipe(plumber())
-	.pipe(sass({errLogToConsole: true}))
+	.pipe(sass({
+		errLogToConsole: true,
+		includePaths: require('node-normalize-scss').includePaths
+	}))
 	.pipe(gulp.dest('dist/css/'));
 });
 

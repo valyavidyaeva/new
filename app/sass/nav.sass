@@ -1,0 +1,78 @@
+.main-nav__list
+  position: relative
+  margin: 0
+  padding: 0
+  list-style-type: none
+.main-nav__item
+  @media (min-width:768px)
+    float: left
+    width: 25%
+    text-align: center
+  &:nth-child(1) .main-nav__link
+    background-color: #ffcf00
+    border-color: #ffcf00
+  &:nth-child(2) .main-nav__link
+    background-color: #d92340
+    border-color: #d92340
+  &:nth-child(3) .main-nav__link
+    background-color: #ff9500
+    border-color: #ff9500
+  &:nth-child(4) .main-nav__link
+    background-color: #443065
+    border-color: #443065
+  &:hover .main-nav__link
+    background-color: #fff
+    border-color: #cecece
+    color: $primary-color
+.main-nav__link
+  position: relative
+  display: block
+  width: 100%
+  padding: 20px
+  border-width: 1px
+  border-style: solid
+  color: #fff
+.inner-nav__list
+  margin: 0
+  padding: 0
+  list-style-type: none
+  text-align: left
+  border: 1px solid #cecece
+  @media (min-width:768px)
+    display: none
+    position: absolute
+    left: 0
+    right: 0
+    flex-wrap: wrap
+.has-inner
+  @media (min-width:768px)
+    &:hover
+      .inner-nav__list
+        display: flex
+      
+.inner-nav__item
+  padding: 10px
+  @media (min-width:768px)
+    flex: 1 1 auto
+  @media (min-width:992px)
+    width: 25%
+    flex-grow: 0
+.inner-nav__link
+  color: $text-color
+  &:hover
+    color: $primary-color
+.menu-toggle
+  display: block
+  margin: 0 auto
+  padding: 10px 20px
+  border: 1px solid $primary-color
+  background-color: transparent
+  cursor: pointer
+  @media (min-width:768px)
+    display: none
+.toggle-inner
+  position: absolute
+  right: 15px
+  z-index: 5
+  @media (min-width:768px)
+    display: none

@@ -8,21 +8,38 @@
   </head>
   <body>
     <header>
-      <div class="container">
+      <div class="container sm-flex">
         <div class="logo logo--header"><a href="index.html"><img src="img/logo.svg" alt="Центр упаковки"></a></div>
-        <p class="tagline"> Яркая упаковка <br> каждый день</p>
-        <div class="phone-header"><a href="tel:84212260640">260-640</a></div>
-        <div class="phone-address"><span>ул. Шевчука, 22</span></div>
+        <p class="tagline"> Яркая упаковка <br> на каждый день</p>
+        <div class="info-header info-header--phone"><img class="icon" src="img/tel.svg" alt=""><a href="tel:84212260640">260-640</a></div>
+        <div class="info-header info-header--address"><img class="icon" src="img/map.svg" alt=""><span>ул. Шевчука, 22</span></div>
       </div>
     </header>
-    <nav>
-      <ul>
-        <li><a>О компании</a></li>
-        <li><a>Наша команда</a></li>
-        <li><a>Продукция</a></li>
-        <li><a>Контакты</a></li>
-      </ul>
-    </nav>
+    <main>
+      <nav class="main-nav container">
+        <button class="menu-toggle">Меню</button>
+        <ul class="main-nav__list">
+          <li class="main-nav__item"><a class="main-nav__link" href="about.html">О компании</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="team.html">Наша команда</a></li>
+          <li class="main-nav__item has-inner"><a class="main-nav__link" href="catalog.html">
+              Продукция<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" data-id="geomicon-chevronDown" class="toggle-inner" viewBox="0 0 32 32"><path d="M1 12 L16 26 L31 12 L27 8 L16 18 L5 8 z"></path></svg></a>
+            <ul class="inner-nav__list">
+              <li class="inner-nav__item"><a class="inner-nav__link" href="product.html">Пакеты</a></li>
+              <li class="inner-nav__item"><a class="inner-nav__link" href="product.html">Термолента</a></li>
+              <li class="inner-nav__item"><a class="inner-nav__link" href="product.html">Одноразовая посуда</a></li>
+              <li class="inner-nav__item"><a class="inner-nav__link" href="product.html">Контейнеры</a></li>
+              <li class="inner-nav__item"><a class="inner-nav__link" href="product.html">Термоэтикетка</a></li>
+              <li class="inner-nav__item"><a class="inner-nav__link" href="product.html">Пищевая пленка</a></li>
+              <li class="inner-nav__item"><a class="inner-nav__link" href="product.html">Мешки для мусора</a></li>
+              <li class="inner-nav__item"><a class="inner-nav__link" href="product.html">Хозтовары</a></li>
+              <li class="inner-nav__item"><a class="inner-nav__link" href="product.html">Бумажная продукция</a></li>
+              <li class="inner-nav__item"><a class="inner-nav__link" href="product.html">Расходные материалы</a></li>
+            </ul>
+          </li>
+          <li class="main-nav__item"><a class="main-nav__link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+    </main>
     <footer>
       <div class="container"></div>
     </footer>

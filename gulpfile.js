@@ -21,14 +21,13 @@ gulp.task('sass', function () {
 	.pipe(plumber())
 	.pipe(sass({
 		errLogToConsole: true,
-		includePaths: require('node-normalize-scss').includePaths
 	}))
-	.pipe(gulp.dest('dist/css/'));
+	.pipe(gulp.dest('dist/css'));
 });
 
 gulp.task('css', () =>
 	gulp.src('app/css/*.css')
-		.pipe(gulp.dest('dist/css/'))
+		.pipe(gulp.dest('dist/css'))
 );
 
 gulp.task('img-min', () =>
@@ -64,7 +63,7 @@ gulp.task('build-css', () =>
 );
 
 gulp.task('default', ['browser-sync'], function () {
-	gulp.watch('app/sass/*.sass', ['sass']);
+	gulp.watch('app/sass/**/*.sass', ['sass']);
 	gulp.watch('app/templates/pages/*.pug', ['pug']);
 	gulp.watch('dist/css/**/*.css', browserSync.reload);
 	gulp.watch('dist/*.html', browserSync.reload);

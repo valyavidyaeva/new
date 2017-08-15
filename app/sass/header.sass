@@ -1,2 +1,43 @@
 header
-    background: #fff
+    padding-top: 10px
+    padding-bottom: 10px
+    background: url(../img/patternheader.png) 100% 0 no-repeat #fff
+    background-size: auto 100%
+    text-align: center
+    @media (min-width:768px)
+        height: 200px
+        .sm-flex
+            justify-content: space-between
+            align-items: center
+            height: 100%
+.logo--header
+    width: 80%
+    margin: 0 auto    
+    @media (min-width: 768px)
+        width: 25%
+        margin: 0
+    @media (min-width: 992px)
+        width: 300px
+.tagline
+    margin: 20px auto
+    font: 20px/1.1 $medium-font 
+    font-style: italic
+    color: $primary-color
+    @media (min-width: 768px) 
+        margin: 0
+.info-header
+    display: inline-block
+    color: $text-color
+    font-size: 22px
+    margin-bottom: 10px
+    @media (min-width: 992px) 
+        font-size: 30px
+        margin-bottom: 0
+.info-header--phone
+    @media (min-width: 330px) and (max-width:991px) 
+        margin-right: 20px
+.icon
+    width: 20px
+    height: 20px
+    display: inline-block
+    margin-right: 10px

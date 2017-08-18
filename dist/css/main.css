@@ -1174,3 +1174,10 @@ footer {
       background-color: #5f5f5f; }
   .person__phone {
     margin-bottom: 20px; }
+
+.error404 {
+  text-align: center;
+  padding: 20px; }
+  @media (min-width: 769px) {
+    .error404 {
+      padding: 100px 40px 40px; } }

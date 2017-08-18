@@ -13,10 +13,12 @@ input, textarea
     font-size: 30px
     text-align: center
     text-transform: uppercase
-    &--shadow
+  &--index
+    .form__title
       color: #fff
       text-shadow: 0px 0px 6px rgba(23, 23, 24, 0.75)
-    &--primary
+  &--primary
+    .form__title
       color: $primary-color
 .input-wrap
   margin-bottom: 15px  
@@ -65,7 +67,6 @@ form
 .agree-wrap
   margin-bottom: 30px
 .agree-label
-  color: #fff
   cursor: pointer
   a
     text-decoration: underline
@@ -76,14 +77,24 @@ form
   &::before
     content: ''
     cursor: pointer    
-    width: 20px
-    height: 20px
+    width: 21px
+    height: 21px
     background-color: #fff
     display: inline-block
     margin-right: 10px
     vertical-align: bottom
+    border: 1px solid #fff
 .agree-checkbox
   display: none
   &:checked + .agree-label::before
     background-image: url(../img/check.svg)
     background-repeat: no-repeat
+.form
+  &--index
+    .agree-label
+      color: #fff
+  &--primary
+    .agree-label
+      color: $text-color
+      &::before
+        border: 1px solid $text-color

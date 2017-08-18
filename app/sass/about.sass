@@ -1,0 +1,53 @@
+.about
+  @media (min-width: 768px)
+    display: flex
+    align-items: flex-start
+  img
+    margin-bottom: 20px
+    @media (min-width: 768px) 
+      width: 30%
+      margin-right: 30px
+.attention
+  &-block
+    background-image: url(../img/background3.jpg)
+    background-size: cover
+    padding: 50px 0
+    @media (min-width: 768px) 
+      padding: 100px 0    
+  &-wrap
+    background-color: rgba(68, 48, 101, 0.7)
+    padding: 40px
+    text-align: center
+    color: #fff
+    max-width: 90%
+    margin: 0 auto
+    @media (min-width: 768px) 
+      max-width: 70%
+    @media (min-width: 992px) 
+      max-width: 50%  
+  &__title
+    font-size: 30px
+    margin-bottom: 20px
+    text-transform: uppercase
+    &--after
+      margin-bottom: 20px
+      img
+        width: 30px
+        height: 30px
+      &::after, &::before
+        content: ''
+        position: relative
+        display: inline-block
+        height: 1px
+        width: 40%
+        bottom: 15px
+        background-color: #fff
+        background-clip: content-box
+      &::before
+        left: -15px
+        margin: 0 0 0 -50%
+      &::after
+        left: 15px
+        margin: 0 -50% 0 0
+  &__text
+    line-height: 1.5

@@ -2,19 +2,18 @@ mixin input(type, placeholder, value)
   .input-wrap
     input(type=type, placeholder=placeholder)
     .error Обязательное поле
-.form
-  .form__title.form__title--shadow Связаться с нами
-  form(action="")
-    +input('text', 'Имя')
-    +input('tel', 'Телефон')
-    +input('email', 'Email')
-    +input('text', 'Город')
-    .input-wrap.input-wrap--area
-      textarea(name="", cols="30", rows="5", placeholder="Сообщение")
-      .error Обязательное поле
-    .agree-wrap
-        input(type="checkbox" id="agree-checkbox" class="agree-checkbox")
-        label(for="agree-checkbox" class="agree-label").
-          Я принимаю условия <a href="">пользовательского соглашения</a>
+.form__title Связаться с нами
+form(action="")
+  +input('text', 'Имя')
+  +input('tel', 'Телефон')
+  +input('email', 'Email')
+  +input('text', 'Город')
+  .input-wrap.input-wrap--area
+    textarea(name="", cols="30", rows="5", placeholder="Сообщение")
     .error Обязательное поле
-    input(type="submit", value="Отправить", class="btn-submit")
+  .agree-wrap
+      input(type="checkbox" id="agree-checkbox" class="agree-checkbox")
+      label(for="agree-checkbox" class="agree-label").
+        Я принимаю условия <a href="">пользовательского соглашения</a>
+  .error Обязательное поле
+  input(type="submit", value="Отправить", class="btn-submit")

@@ -1,0 +1,10 @@
+mixin product(img, title, desc)
+  .primary-grid__item
+    .product
+      .price--label от 300 р.
+      figure
+        a(href=img data-fancybox="images" data-caption="")
+          img(src=img, alt="", class="product__img")
+        figcaption
+          .product__title= title
+          .product__desc= desc

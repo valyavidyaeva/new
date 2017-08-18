@@ -1,0 +1,44 @@
+.team
+  margin-top: 40px
+  @media (min-width: 769px)
+    display: flex
+    flex-wrap: wrap
+.person
+  background-color: #fff
+  margin-bottom: 40px
+  @media (min-width: 769px)
+    display: flex
+  @media (min-width: 992px)
+    width: 50%
+  &__img
+    @media (min-width: 769px)
+      width: 50%
+    img
+      display: block
+      height: 100%
+      width: 100%
+      object-fit: cover
+  &__info
+    padding: 20px
+    @media (min-width: 769px)
+      width: 50%
+    @media (min-width: 992px)      
+      padding: 2vw 1vw
+  &__name
+    text-transform: uppercase
+    font-size: 20px
+    font-family: $medium-font
+    line-height: 1.3
+    margin-bottom: 20px
+  &__position
+    padding-bottom: 20px
+    &::after
+      content: ''
+      display: block
+      width: 80%
+      margin-top: 20px
+      height: 1px
+      background-color: $text-color
+  &__phone
+    margin-bottom: 20px
+  &__email

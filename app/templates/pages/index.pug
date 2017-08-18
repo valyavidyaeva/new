@@ -1,4 +1,5 @@
 extends ../base.pug
+include ../mixins/products.pug
 block title 
 	title Центр упаковки - главная
 block content
@@ -24,13 +25,20 @@ block content
 				<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" data-id="geomicon-chevronDown" viewBox="0 0 32 32"><path d="M1 12 L16 26 L31 12 L27 8 L16 18 L5 8 z"></path></svg>
 	.container
 		.title--block Лучшие предложения
-		include ../includes/products.pug
+		.products-wrap
+			+product('img/goods/IMG_2289.png','Банка 1000 мл d-170 мм шайба прозрачная с крышкой 210','Артикул: 17-0010')
+			+product('img/goods/IMG_2289.png','Банка 1000 мл d-170 мм шайба прозрачная с крышкой 210','Артикул: 17-0010')
+			+product('img/goods/IMG_2289.png','Банка 1000 мл d-170 мм шайба прозрачная с крышкой 210','Артикул: 17-0010')
+			+product('img/goods/IMG_2289.png','Банка 1000 мл d-170 мм шайба прозрачная с крышкой 210','Артикул: 17-0010')
+			+product('img/goods/IMG_2289.png','Банка 1000 мл d-170 мм шайба прозрачная с крышкой 210','Артикул: 17-0010')
+			+product('img/goods/IMG_2289.png','Банка 1000 мл d-170 мм шайба прозрачная с крышкой 210','Артикул: 17-0010')
 	.form-bg
 		.container
 			.form.form--index
 				include ../includes/form.pug
 	.map#map
 block scripts
+	script(src="js/maskedinput-fixed.js")
 	script(src="//api-maps.yandex.ru/2.1/?lang=ru_RU")
 	script.
 		ymaps.ready(function () {

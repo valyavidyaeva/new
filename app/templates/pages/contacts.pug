@@ -1,0 +1,60 @@
+extends ../base.pug
+include ../mixins/products.pug
+block title 
+  title Центр упаковки - Контакты
+block content
+  .map#map
+  +breadcrumbs('Контакты')
+  .gradient-section
+    .container
+      h1.page__title Контакты
+      .text-wrap
+          p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Своих своего образ составитель залетают алфавит прямо вершину последний она взгляд переписывается великий злых свою заглавных города несколько, реторический ipsum?
+      .contacts-wrap
+        - for (var x = 0; x < 3; x++)
+          .contacts__item
+            img(src="img/photo.jpg", alt="")
+            ul.reset-list.contacts-list
+              li 
+                img(src="img/map.svg", alt="")
+                .
+                  г. Хабаровск, ул. Шевчука, 22
+              li 
+                img(src="img/tel.svg", alt="")
+                .
+                  8 (4212) 260-640
+              li 
+                img(src="img/mail.svg", alt="")
+                .
+                 Upacovka@mail.ru
+              li 
+                img(src="img/clock.svg", alt="")
+                .
+                  пн-сб: с 9.00 до 18.00, <br> вс - выходной
+  .opacity-bg
+    .container
+      .form.form--primary
+        include ../includes/form.pug
+block scripts
+  script(src="js/maskedinput-fixed.js")
+  script(src="//api-maps.yandex.ru/2.1/?lang=ru_RU")
+  script.
+    ymaps.ready(function () {
+      var myMap = new ymaps.Map('map', {
+          center: [48.486370, 135.091787],
+          zoom: 15,
+          controls: []
+      }),
+      myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+          hintContent: "Центр упаковки",
+          balloonContent: 'text'
+      }, {
+          iconLayout: 'default#image',
+          iconImageHref: 'img/maplogo.png',
+          iconImageSize: [100, 100],
+          iconImageOffset: [-9, -40]
+      });
+      myMap.controls.add('zoomControl');
+      myMap.behaviors.disable('scrollZoom');
+      myMap.geoObjects.add(myPlacemark);
+    });

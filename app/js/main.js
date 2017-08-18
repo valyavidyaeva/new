@@ -5,9 +5,11 @@ var   menuToggle = document.getElementById('menu-toggle'),
 
 function toggle(el) {
   el.previousElementSibling.classList.toggle('toggled');
+  // el.slideToggle();
   el.classList.toggle('open');
   window.onresize = function(){ checkWindow();};
 };
+
 function checkWindow(){
   if (window.innerWidth >= 769) {
     mainNav.classList.remove('open');

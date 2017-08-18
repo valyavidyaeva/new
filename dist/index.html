@@ -11,6 +11,7 @@
 <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
 <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
   </head>
   <body>
     <header>
@@ -28,19 +29,19 @@
           <ul class="main-nav__list" id="nav">
             <li class="main-nav__item"><a class="main-nav__link" href="about.html">О компании</a></li>
             <li class="main-nav__item"><a class="main-nav__link" href="team.html">Наша команда</a></li>
-            <li class="main-nav__item has-inner"><a class="main-nav__link" href="catalog.html">Продукция</a>
+            <li class="main-nav__item has-inner"><a class="main-nav__link" href="category.html">Продукция</a>
               <button class="toggle-inner" id="toggle-inner"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" data-id="geomicon-chevronDown" viewBox="0 0 32 32"><path d="M1 12 L16 26 L31 12 L27 8 L16 18 L5 8 z"></path></svg></button>
               <ul class="inner-nav__list" id="inner-nav">
-                <li class="inner-nav__item"><a class="inner-nav__link" href="product.html">Пакеты</a></li>
-                <li class="inner-nav__item"><a class="inner-nav__link" href="product.html">Термолента</a></li>
-                <li class="inner-nav__item"><a class="inner-nav__link" href="product.html">Одноразовая посуда</a></li>
-                <li class="inner-nav__item"><a class="inner-nav__link" href="product.html">Контейнеры</a></li>
-                <li class="inner-nav__item"><a class="inner-nav__link" href="product.html">Термоэтикетка</a></li>
-                <li class="inner-nav__item"><a class="inner-nav__link" href="product.html">Пищевая пленка</a></li>
-                <li class="inner-nav__item"><a class="inner-nav__link" href="product.html">Мешки для мусора</a></li>
-                <li class="inner-nav__item"><a class="inner-nav__link" href="product.html">Хозтовары</a></li>
-                <li class="inner-nav__item"><a class="inner-nav__link" href="product.html">Бумажная продукция</a></li>
-                <li class="inner-nav__item"><a class="inner-nav__link" href="product.html">Расходные материалы</a></li>
+                <li class="inner-nav__item"><a class="inner-nav__link" href="category.html">Пакеты</a></li>
+                <li class="inner-nav__item"><a class="inner-nav__link" href="category.html">Термолента</a></li>
+                <li class="inner-nav__item"><a class="inner-nav__link" href="category.html">Одноразовая посуда</a></li>
+                <li class="inner-nav__item"><a class="inner-nav__link" href="category.html">Контейнеры</a></li>
+                <li class="inner-nav__item"><a class="inner-nav__link" href="category.html">Термоэтикетка</a></li>
+                <li class="inner-nav__item"><a class="inner-nav__link" href="category.html">Пищевая пленка</a></li>
+                <li class="inner-nav__item"><a class="inner-nav__link" href="category.html">Мешки для мусора</a></li>
+                <li class="inner-nav__item"><a class="inner-nav__link" href="category.html">Хозтовары</a></li>
+                <li class="inner-nav__item"><a class="inner-nav__link" href="category.html">Бумажная продукция</a></li>
+                <li class="inner-nav__item"><a class="inner-nav__link" href="category.html">Расходные материалы</a></li>
               </ul>
             </li>
             <li class="main-nav__item"><a class="main-nav__link" href="contacts.html">Контакты</a></li>
@@ -133,61 +134,72 @@
       <div class="container">
         <div class="title--block">Лучшие предложения</div>
         <div class="products-wrap">
-                  <div class="primary-grid__item">
-                    <div class="product">
-                      <div class="price--label">от 300 р.</div>
-                      <figure><a href=""><img class="product__img" src="img/goods/IMG_2289.png" alt=""></a>
-                        <figcaption>
-                          <div class="product__title">Банка 1000 мл d-170 мм шайба прозрачная с крышкой 210</div>
-                          <div class="product__desc">Артикул: 17-0010</div>
-                        </figcaption>
-                      </figure>
-                    </div>
-                  </div>
-                  <div class="primary-grid__item">
-                    <div class="product">
-                      <div class="price--label">от 300 р.</div>
-                      <figure><a href=""><img class="product__img" src="img/goods/IMG_2289.png" alt=""></a>
-                        <figcaption>
-                          <div class="product__title">Банка 1000 мл d-170 мм шайба прозрачная с крышкой 210</div>
-                          <div class="product__desc">Артикул: 17-0010</div>
-                        </figcaption>
-                      </figure>
-                    </div>
-                  </div>
-                  <div class="primary-grid__item">
-                    <div class="product">
-                      <div class="price--label">от 300 р.</div>
-                      <figure><a href=""><img class="product__img" src="img/goods/IMG_2289.png" alt=""></a>
-                        <figcaption>
-                          <div class="product__title">Банка 1000 мл d-170 мм шайба прозрачная с крышкой 210</div>
-                          <div class="product__desc">Артикул: 17-0010</div>
-                        </figcaption>
-                      </figure>
-                    </div>
-                  </div>
-                  <div class="primary-grid__item">
-                    <div class="product">
-                      <div class="price--label">от 300 р.</div>
-                      <figure><a href=""><img class="product__img" src="img/goods/IMG_2289.png" alt=""></a>
-                        <figcaption>
-                          <div class="product__title">Банка 1000 мл d-170 мм шайба прозрачная с крышкой 210</div>
-                          <div class="product__desc">Артикул: 17-0010</div>
-                        </figcaption>
-                      </figure>
-                    </div>
-                  </div>
-                  <div class="primary-grid__item">
-                    <div class="product">
-                      <div class="price--label">от 300 р.</div>
-                      <figure><a href=""><img class="product__img" src="img/goods/IMG_2289.png" alt=""></a>
-                        <figcaption>
-                          <div class="product__title">Банка 1000 мл d-170 мм шайба прозрачная с крышкой 210</div>
-                          <div class="product__desc">Артикул: 17-0010</div>
-                        </figcaption>
-                      </figure>
-                    </div>
-                  </div>
+          <div class="primary-grid__item">
+            <div class="product">
+              <div class="price--label">от 300 р.</div>
+              <figure><a href="img/goods/IMG_2289.png" data-fancybox="images" data-caption=""><img class="product__img" src="img/goods/IMG_2289.png" alt=""/></a>
+                <figcaption>
+                  <div class="product__title">Банка 1000 мл d-170 мм шайба прозрачная с крышкой 210</div>
+                  <div class="product__desc">Артикул: 17-0010</div>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="primary-grid__item">
+            <div class="product">
+              <div class="price--label">от 300 р.</div>
+              <figure><a href="img/goods/IMG_2289.png" data-fancybox="images" data-caption=""><img class="product__img" src="img/goods/IMG_2289.png" alt=""/></a>
+                <figcaption>
+                  <div class="product__title">Банка 1000 мл d-170 мм шайба прозрачная с крышкой 210</div>
+                  <div class="product__desc">Артикул: 17-0010</div>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="primary-grid__item">
+            <div class="product">
+              <div class="price--label">от 300 р.</div>
+              <figure><a href="img/goods/IMG_2289.png" data-fancybox="images" data-caption=""><img class="product__img" src="img/goods/IMG_2289.png" alt=""/></a>
+                <figcaption>
+                  <div class="product__title">Банка 1000 мл d-170 мм шайба прозрачная с крышкой 210</div>
+                  <div class="product__desc">Артикул: 17-0010</div>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="primary-grid__item">
+            <div class="product">
+              <div class="price--label">от 300 р.</div>
+              <figure><a href="img/goods/IMG_2289.png" data-fancybox="images" data-caption=""><img class="product__img" src="img/goods/IMG_2289.png" alt=""/></a>
+                <figcaption>
+                  <div class="product__title">Банка 1000 мл d-170 мм шайба прозрачная с крышкой 210</div>
+                  <div class="product__desc">Артикул: 17-0010</div>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="primary-grid__item">
+            <div class="product">
+              <div class="price--label">от 300 р.</div>
+              <figure><a href="img/goods/IMG_2289.png" data-fancybox="images" data-caption=""><img class="product__img" src="img/goods/IMG_2289.png" alt=""/></a>
+                <figcaption>
+                  <div class="product__title">Банка 1000 мл d-170 мм шайба прозрачная с крышкой 210</div>
+                  <div class="product__desc">Артикул: 17-0010</div>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="primary-grid__item">
+            <div class="product">
+              <div class="price--label">от 300 р.</div>
+              <figure><a href="img/goods/IMG_2289.png" data-fancybox="images" data-caption=""><img class="product__img" src="img/goods/IMG_2289.png" alt=""/></a>
+                <figcaption>
+                  <div class="product__title">Банка 1000 мл d-170 мм шайба прозрачная с крышкой 210</div>
+                  <div class="product__desc">Артикул: 17-0010</div>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
         </div>
       </div>
       <div class="form-bg">
@@ -237,7 +249,7 @@
             <ul class="footer-nav__list">
               <li class="footer-nav__item"><a class="footer-nav__link" href="about.html">О компании</a></li>
               <li class="footer-nav__item"><a class="footer-nav__link" href="team.html">Наша команда</a></li>
-              <li class="footer-nav__item"><a class="footer-nav__link" href="catalog.html">Продукция</a></li>
+              <li class="footer-nav__item"><a class="footer-nav__link" href="category.html">Продукция</a></li>
               <li class="footer-nav__item"><a class="footer-nav__link" href="contacts.html">Контакты</a></li>
             </ul>
           </nav>
@@ -248,7 +260,9 @@
             </svg></a></div>
       </div>
     </footer><img class="bot-img" src="img/patternfooter.png" alt="">
+    <script src="js/jquery.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/maskedinput-fixed.js"></script>
     <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
     <script>
       ymaps.ready(function () {

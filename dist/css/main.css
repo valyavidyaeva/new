@@ -387,7 +387,7 @@ template {
   @media (min-width: 576px) {
     .container {
       max-width: 540px; } }
-  @media (min-width: 768px) {
+  @media (min-width: 769px) {
     .container {
       max-width: 720px; } }
   @media (min-width: 992px) {
@@ -439,6 +439,11 @@ template {
 @media (min-width: 769px) {
   .sm-flex {
     display: flex; } }
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both; }
 
 body {
   font-family: Ubuntu-regular, Arial, sans-serif;
@@ -500,7 +505,19 @@ p {
 h1 {
   color: #d92340;
   margin-top: 0;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  text-transform: uppercase; }
+
+.btn-download {
+  background-color: #d92340;
+  color: #fff;
+  float: right;
+  clear: both;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px; }
+  .btn-download a {
+    color: currentColor; }
 
 textarea {
   resize: vertical; }
@@ -992,7 +1009,7 @@ footer {
 .products-wrap {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 30px; }
+  padding-bottom: 30px; }
 
 .product {
   position: relative;
@@ -1002,6 +1019,10 @@ footer {
   .product__title {
     color: #d92340;
     margin: 10px 0; }
+  .product__img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain; }
 
 .price--label {
   position: absolute;
@@ -1011,14 +1032,14 @@ footer {
   background-color: #d92340;
   color: #fff; }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .about {
     display: flex;
     align-items: flex-start; } }
 
 .about img {
   margin-bottom: 20px; }
-  @media (min-width: 768px) {
+  @media (min-width: 769px) {
     .about img {
       width: 30%;
       margin-right: 30px; } }
@@ -1027,7 +1048,7 @@ footer {
   background-image: url(../img/background3.jpg);
   background-size: cover;
   padding: 50px 0; }
-  @media (min-width: 768px) {
+  @media (min-width: 769px) {
     .attention-block {
       padding: 100px 0; } }
 
@@ -1038,7 +1059,7 @@ footer {
   color: #fff;
   max-width: 90%;
   margin: 0 auto; }
-  @media (min-width: 768px) {
+  @media (min-width: 769px) {
     .attention-wrap {
       max-width: 70%; } }
   @media (min-width: 992px) {
@@ -1072,3 +1093,84 @@ footer {
 
 .attention__text {
   line-height: 1.5; }
+
+.contacts-wrap {
+  margin-top: 30px; }
+  @media (min-width: 769px) {
+    .contacts-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; } }
+
+.contacts__item {
+  padding: 15px; }
+  @media (min-width: 769px) {
+    .contacts__item {
+      max-width: 50%;
+      flex: 1 1 50%; } }
+  @media (min-width: 992px) {
+    .contacts__item {
+      max-width: 33.333%;
+      flex: 1 1 33.333%; } }
+  .contacts__item img {
+    margin-bottom: 20px;
+    width: 100%; }
+
+.contacts-list li {
+  margin-bottom: 20px;
+  color: #5f5f5f;
+  clear: both; }
+  .contacts-list li img {
+    width: 20px;
+    float: left;
+    margin-right: 10px; }
+
+.team {
+  margin-top: 40px; }
+  @media (min-width: 769px) {
+    .team {
+      display: flex;
+      flex-wrap: wrap; } }
+
+.person {
+  background-color: #fff;
+  margin-bottom: 40px; }
+  @media (min-width: 769px) {
+    .person {
+      display: flex; } }
+  @media (min-width: 992px) {
+    .person {
+      width: 50%; } }
+  @media (min-width: 769px) {
+    .person__img {
+      width: 50%; } }
+  .person__img img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
+  .person__info {
+    padding: 20px; }
+    @media (min-width: 769px) {
+      .person__info {
+        width: 50%; } }
+    @media (min-width: 992px) {
+      .person__info {
+        padding: 2vw 1vw; } }
+  .person__name {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-family: Ubuntu-medium, Arial, sans-serif;
+    line-height: 1.3;
+    margin-bottom: 20px; }
+  .person__position {
+    padding-bottom: 20px; }
+    .person__position::after {
+      content: '';
+      display: block;
+      width: 80%;
+      margin-top: 20px;
+      height: 1px;
+      background-color: #5f5f5f; }
+  .person__phone {
+    margin-bottom: 20px; }

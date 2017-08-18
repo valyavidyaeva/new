@@ -1,0 +1,27 @@
+extends ../base.pug
+include ../mixins/products.pug
+block title 
+  title Центр упаковки - Наша команда
+block content
+  +breadcrumbs('Наша команда')
+  .gradient-section
+    .container
+      h1.page__title Наша команда
+      .text-wrap
+          p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Своих своего образ составитель залетают алфавит прямо вершину последний она взгляд переписывается великий злых свою заглавных города несколько, реторический ipsum?
+      .team
+        - for (var x = 0; x < 4; x++)
+          .person
+            .person__img
+              img(src="img/team2.jpg", alt="")
+            .person__info
+              .person__name Афанасьева Алевтина Петровна
+              .person__position Начальник отдела продаж
+              .person__phone 8-914-123-45-67
+              .person__email info@mail.ru
+  .opacity-bg
+    .container
+      .form.form--primary
+        include ../includes/form.pug
+block scripts
+  script(src="js/maskedinput-fixed.js")

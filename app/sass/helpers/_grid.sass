@@ -5,7 +5,7 @@
 	padding-right: 15px
 	@media (min-width: 576px) 
     max-width: 540px
-	@media (min-width: 768px) 
+	@media (min-width: 769px) 
 			max-width: 720px
 	@media (min-width: 992px) 
 			max-width: 960px
@@ -42,3 +42,7 @@
 @media (min-width: 769px) 
 	.sm-flex
 		display: flex
+.clearfix::after 
+    content: ""
+    display: table
+    clear: both

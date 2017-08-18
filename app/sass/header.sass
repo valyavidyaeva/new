@@ -4,7 +4,7 @@ header
     background: url(../img/patternheader.png) 100% 0 no-repeat #fff
     background-size: auto 100%
     text-align: center
-    @media (min-width:768px)
+    @media (min-width:769px)
         height: 200px
         .sm-flex
             justify-content: space-between
@@ -13,18 +13,23 @@ header
 .logo--header
     width: 80%
     margin: 0 auto    
-    @media (min-width: 768px)
+    @media (min-width: 769px)
         width: 25%
         margin: 0
     @media (min-width: 992px)
         width: 300px
 .tagline
     margin: 20px auto
-    font: 20px/1.1 $medium-font 
-    font-style: italic
-    color: $primary-color
-    @media (min-width: 768px) 
+    width: 80%    
+    @media (min-width: 550px)
+        width: 50%
+    @media (min-width: 769px)
+        width: 200px
         margin: 0
+    @media (min-width: 1200px)
+        width: 300px
+    img
+        width: 100%
 .info-header
     display: inline-block
     color: $text-color
@@ -34,6 +39,8 @@ header
         font-size: 30px
         margin-bottom: 0
 .info-header--phone
+    a:hover
+        color: $text-color
     @media (min-width: 330px) and (max-width:991px) 
         margin-right: 20px
 .icon

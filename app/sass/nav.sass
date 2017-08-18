@@ -1,11 +1,18 @@
+.main-nav
+  width: 100%
+  @media (min-width:769px)
+    position: absolute
+    z-index: 2
 .main-nav__list
   position: relative
   margin: 0
   padding: 0
   list-style-type: none
+  display: none
+  @media (min-width:769px)
+    display: flex    
 .main-nav__item
-  @media (min-width:768px)
-    float: left
+  @media (min-width:769px)
     width: 25%
     text-align: center
   &:nth-child(1) .main-nav__link
@@ -32,27 +39,33 @@
   border-width: 1px
   border-style: solid
   color: #fff
+  text-transform: uppercase
+  font-family: $medium-font
 .inner-nav__list
   margin: 0
-  padding: 0
+  padding: 10px
   list-style-type: none
   text-align: left
   border: 1px solid #cecece
-  @media (min-width:768px)
-    display: none
+  background-color: #fff
+  display: none
+  @media (min-width:769px)
     position: absolute
     left: 0
     right: 0
     flex-wrap: wrap
 .has-inner
-  @media (min-width:768px)
+  position: relative
+  &:hover .toggle-inner
+    color: $primary-color
+  @media (min-width:769px)
+    position: static
     &:hover
       .inner-nav__list
         display: flex
-      
 .inner-nav__item
   padding: 10px
-  @media (min-width:768px)
+  @media (min-width:769px)
     flex: 1 1 auto
   @media (min-width:992px)
     width: 25%
@@ -63,16 +76,37 @@
     color: $primary-color
 .menu-toggle
   display: block
+  width: 100%
   margin: 0 auto
   padding: 10px 20px
   border: 1px solid $primary-color
   background-color: transparent
+  color: $primary-color  
   cursor: pointer
-  @media (min-width:768px)
+  @media (min-width:769px)
     display: none
+  &:focus
+    outline-color: $primary-color      
+  img
+    vertical-align: middle
+    margin-left: 20px
 .toggle-inner
   position: absolute
   right: 15px
+  top: 10px
+  padding: 10px
+  border: none
+  background: transparent
   z-index: 5
-  @media (min-width:768px)
+  color: #fff
+  cursor: pointer
+  transition: .3s transform
+  will-change: transform
+  &:focus
+    outline: none
+  &.toggled 
+    transform: rotate(180deg)
+  @media (min-width:769px)
     display: none
+.open
+  display: block

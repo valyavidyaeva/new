@@ -1,0 +1,89 @@
+textarea
+  resize: vertical
+input, textarea
+  &:focus
+    outline-color: $primary-color
+.form-bg
+  background-image: url(../img/background2.jpg)
+  background-size: cover
+.form
+  padding: 40px 0
+  &__title
+    margin-bottom: 30px
+    font-size: 30px
+    text-align: center
+    text-transform: uppercase
+    &--shadow
+      color: #fff
+      text-shadow: 0px 0px 6px rgba(23, 23, 24, 0.75)
+    &--primary
+      color: $primary-color
+.input-wrap
+  margin-bottom: 15px  
+  @media (min-width:550px)
+    margin-bottom: 30px
+  input, textarea
+    border: 1px solid #171718
+    background-color: rgba(255,255,255, .6)
+    padding: 15px
+    width: 100%
+  @media (min-width:550px)
+    &:nth-child(n+1):nth-child(-n+4)
+      width: 50%
+      padding-right: 15px
+    &:nth-child(n+1):nth-child(-n+4):nth-child(even)
+      padding-left: 15px
+      padding-right: 0
+  &--area
+    width: 100%
+form
+  @media (min-width:550px)  
+    display: flex
+    flex-wrap: wrap
+.btn-submit
+  display: block
+  width: 300px
+  padding: 20px 0
+  margin: 0 auto 
+  background-color: $primary-color
+  color: #fff
+  border: none
+  box-shadow: none
+  text-align: center
+  text-transform: uppercase
+  font-size: 20px
+  font-family: $medium-font
+  cursor: pointer
+  transition: background .5s linear 
+  @media (min-width:992px)
+    margin-right: 0
+    margin-top: 0
+  &:hover
+    background-color: transparentize($primary-color, 0.3)
+.error
+  display: none
+.agree-wrap
+  margin-bottom: 30px
+.agree-label
+  color: #fff
+  cursor: pointer
+  a
+    text-decoration: underline
+    color: currentColor
+    &:hover
+      text-decoration: none
+      color: $primary-color
+  &::before
+    content: ''
+    cursor: pointer    
+    width: 20px
+    height: 20px
+    background-color: #fff
+    display: inline-block
+    margin-right: 10px
+    vertical-align: bottom
+.agree-checkbox
+  display: none
+  &:checked + .agree-label::before
+    background-image: url(../img/check.svg)
+    background-repeat: no-repeat

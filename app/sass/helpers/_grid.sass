@@ -3,15 +3,14 @@
 	margin-left: auto
 	padding-left: 15px
 	padding-right: 15px
-
+	@media (min-width: 576px) 
+    max-width: 540px
+	@media (min-width: 768px) 
+			max-width: 720px
+	@media (min-width: 992px) 
+			max-width: 960px
 	@media (min-width: 1200px) 
-		width: 100%
-		padding-left: 40px
-		padding-right: 40px
-	
-.row 
-	margin-left: -15px
-	margin-right: -15px
+			max-width: 1140px
 
 .flex-container 
 	margin-right: auto
@@ -19,7 +18,6 @@
 	padding-left: 15px
 	padding-right: 15px
 	display: flex
-	
 	@media (min-width: 1200px) 
 		width: 100%
 		padding-left: 40px
@@ -27,10 +25,7 @@
 	
 .flex
 	display: flex
-
-@media (min-width: 768px) 
-	.sm-flex
-		display: flex
+	
 .space-between 
 	justify-content: space-between
 
@@ -39,3 +34,11 @@
 
 .flex-0 
 	flex: 0 0 auto
+
+.primary-grid__item
+	padding: 15px
+	@include primary-grid
+
+@media (min-width: 769px) 
+	.sm-flex
+		display: flex

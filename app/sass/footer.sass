@@ -1,0 +1,58 @@
+footer
+  border-top: 1px solid #cecece
+  padding: 30px 0
+  text-align: center
+  @media (min-width:992px)
+    padding: 70px 0
+    text-align: left
+  .row
+    @media (min-width:992px)  
+      display: flex
+      flex-wrap: wrap
+      align-content: space-between
+.logo--footer
+  width: 250px
+  margin: 0 auto 15px
+  @media (min-width:992px)
+    margin-right: 50px
+    margin-bottom: 0
+.footer-nav
+  display: none
+  @media (min-width:769px)
+    display: block
+    width: 100%
+  &__list
+    margin: 0
+    padding: 0
+    list-style-type: none
+  &__item
+    display: inline-block
+    margin-right: 2vw
+    &:last-child
+      margin-right: 0
+  &__link
+    color: $text-color
+    &::after
+      content: ''
+      display: block
+      max-width: 0
+      height: 2px
+      margin-top: 2px
+      background-color: $primary-color
+      transition: .3s
+    &:hover
+      color: $primary-color
+      &::after
+        max-width: 80%
+.info-footer
+  display: inline-block
+  margin-right: 30px
+  &--address
+    margin-right: 0
+.vbo-block
+  min-width: 200px
+  align-self: flex-end
+  font-size: .85em
+  margin-top: 40px
+  @media (min-width:992px)
+    margin-top: 0  

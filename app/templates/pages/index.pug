@@ -2,3 +2,52 @@ extends ../base.pug
 block title 
 	title Центр упаковки - главная
 block content
+	.top-block
+		.container
+			.top-block__text Далеко-далеко за словесными, горами в стране гласных и согласных живут рыбные тексты. Языкового предупредила пустился жаренные меня, ведущими вопроса взгляд необходимыми рукописи грустный страна переулка? Использовало имеет которой маленькая заманивший о рыбного.
+	.categories
+		.container.items-wrap
+			+category-item('Пакеты', 'img/pacet.jpg')
+			+category-item('Пакеты', 'img/pacet.jpg')
+			+category-item('Пакеты', 'img/pacet.jpg')
+			+category-item('Пакеты', 'img/pacet.jpg')
+			+category-item('Пакеты', 'img/pacet.jpg')
+			+category-item('Пакеты', 'img/pacet.jpg')
+			+category-item('Пакеты', 'img/pacet.jpg')
+			+category-item('Пакеты', 'img/pacet.jpg')
+			+category-item('Пакеты', 'img/pacet.jpg')
+			+category-item('Пакеты', 'img/pacet.jpg')
+			+category-item('Пакеты', 'img/pacet.jpg')
+			+category-item('Пакеты', 'img/pacet.jpg')
+		.more-items
+			a(href="" class="") Показать больше <br>
+				<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" data-id="geomicon-chevronDown" viewBox="0 0 32 32"><path d="M1 12 L16 26 L31 12 L27 8 L16 18 L5 8 z"></path></svg>
+	.container
+		.title--block Лучшие предложения
+		include ../includes/products.pug
+	.form-bg
+		.container
+			include ../includes/form.pug
+	.map#map
+block scripts
+	//- script(src="//api-maps.yandex.ru/2.1/?lang=ru_RU")
+	//- script.
+	//- 	ymaps.ready(function () {
+	//- 		var myMap = new ymaps.Map('map', {
+	//- 				center: [48.486370, 135.091787],
+	//- 				zoom: 15,
+	//- 				controls: []
+	//- 		}),
+	//- 		myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+	//- 				hintContent: "Центр упаковки",
+	//- 				balloonContent: 'text'
+	//- 		}, {
+	//- 				iconLayout: 'default#image',
+	//- 				iconImageHref: 'img/logomap.jpg',
+	//- 				iconImageSize: [100, 100],
+	//- 				iconImageOffset: [-9, -40]
+	//- 		});
+	//- 		myMap.controls.add('zoomControl');
+	//- 		myMap.behaviors.disable('scrollZoom');
+	//- 		myMap.geoObjects.add(myPlacemark);
+	//- 	});

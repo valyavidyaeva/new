@@ -2,8 +2,14 @@ extends ../base.pug
 include ../mixins/products.pug
 block title 
 	title Центр упаковки - главная
+block css
+	link(rel="stylesheet", href="css/slick.css")
 block content
-	.top-block
+	.top-slider
+		.slider
+			img(src="img/background1.jpg", alt="")
+			img(src="img/background2.jpg", alt="")
+			img(src="img/background3.jpg", alt="")
 		.container
 			.top-block__text Далеко-далеко за словесными, горами в стране гласных и согласных живут рыбные тексты. Языкового предупредила пустился жаренные меня, ведущими вопроса взгляд необходимыми рукописи грустный страна переулка? Использовало имеет которой маленькая заманивший о рыбного.
 	.categories
@@ -42,6 +48,7 @@ block content
 block scripts
 	script(src="js/jquery.fancybox.min.js")
 	script(src="js/maskedinput-fixed.js")
+	script(src="js/slick.min.js")
 	script(src="//api-maps.yandex.ru/2.1/?lang=ru_RU")
 	script.
 		ymaps.ready(init);
@@ -53,22 +60,32 @@ block scripts
 					'<span><b>Адрес: </b>г. Хабаровск, ул. Шевчука, 22</span>'
 				];
 		function init() {
-				myMap = new ymaps.Map('map', {
-						center: coords[0],
-						zoom: 13,
-						controls: []
-				});
-				for (var i = 0; i < coords.length; i++) {
-						var myPlacemark = new ymaps.Placemark(coords[i], {
-								balloonContent: data_map[i]
-						}, {
-								iconLayout: 'default#image',
-								iconImageHref: 'img/maplogo.png',
-								iconImageSize: [100, 100],
-								iconImageOffset: [-9, -40]
-						});
-						myMap.geoObjects.add(myPlacemark);
-				}
-				myMap.controls.add('zoomControl', {});
-				myMap.behaviors.disable('scrollZoom');
+			myMap = new ymaps.Map('map', {
+					center: coords[0],
+					zoom: 13,
+					controls: []
+			});
+			for (var i = 0; i < coords.length; i++) {
+					var myPlacemark = new ymaps.Placemark(coords[i], {
+							balloonContent: data_map[i]
+					}, {
+							iconLayout: 'default#image',
+							iconImageHref: 'img/maplogo.png',
+							iconImageSize: [100, 100],
+							iconImageOffset: [-9, -40]
+					});
+					myMap.geoObjects.add(myPlacemark);
+			}
+			myMap.controls.add('zoomControl', {});
+			myMap.behaviors.disable('scrollZoom');
 		}
+		$('.slider').slick({
+			infinite: true,
+			dots: false,
+			autoplay: false,
+			arrows: true,
+			fade: true,
+			cssEase: 'linear',
+			slidesToShow: 1,
+			slidesToScroll: 1
+		});

@@ -1,10 +1,16 @@
-mixin product(img, title, desc)
+mixin product(img, title, desc, id)
   .primary-grid__item
     .product
       .price--label от 300 р.
       figure
-        a(href=img data-fancybox="images" data-caption="")
+        a(href="javascript:;" data-fancybox="images" data-src="#lb-info"+id)
           img(src=img, alt="", class="product__img")
         figcaption
           .product__title= title
           .product__desc= desc
+          .lb-info(id='lb-info'+id)
+            img(src=img, alt="")
+            .lb-info__text-wrap
+              .product__title= title
+              .product__desc= desc
+              .product__price= "300 р."

@@ -26,14 +26,14 @@ block content
 	.container
 		.title--block Лучшие предложения
 		.products-wrap
-			+product('img/goods/IMG_2289.png','Банка 1000 мл d-170 мм шайба прозрачная с крышкой 210','Артикул: 17-0010')
-			+product('img/goods/IMG_2290.png','Банка 1000 мл d-170 мм шайба прозрачная с крышкой 210','Артикул: 17-0010')
-			+product('img/goods/IMG_2298.png','Банка 1000 мл d-170 мм шайба прозрачная с крышкой 210','Артикул: 17-0010')
-			+product('img/goods/IMG_2299.png','Банка 1000 мл d-170 мм шайба прозрачная с крышкой 210','Артикул: 17-0010')
-			+product('img/goods/IMG_2300.png','Банка 1000 мл d-170 мм шайба прозрачная с крышкой 210','Артикул: 17-0010')
-			+product('img/goods/IMG_2301.png','Банка 1000 мл d-170 мм шайба прозрачная с крышкой 210','Артикул: 17-0010')
-			+product('img/goods/IMG_2302.png','Банка 1000 мл d-170 мм шайба прозрачная с крышкой 210','Артикул: 17-0010')
-			+product('img/goods/IMG_2302-1.png','Банка 1000 мл d-170 мм шайба прозрачная с крышкой 210','Артикул: 17-0010')
+			+product('img/goods/IMG_2289.png','Банка 1000 мл d-170 мм шайба прозрачная с крышкой 210','Артикул: 17-0010', 1)
+			+product('img/goods/IMG_2290.png','Банка 1000 мл d-170 мм шайба прозрачная с крышкой 210','Артикул: 17-0010', 2)
+			+product('img/goods/IMG_2298.png','Банка 1000 мл d-170 мм шайба прозрачная с крышкой 210','Артикул: 17-0010', 3)
+			+product('img/goods/IMG_2299.png','Банка 1000 мл d-170 мм шайба прозрачная с крышкой 210','Артикул: 17-0010', 4)
+			+product('img/goods/IMG_2300.png','Банка 1000 мл d-170 мм шайба прозрачная с крышкой 210','Артикул: 17-0010', 5)
+			+product('img/goods/IMG_2301.png','Банка 1000 мл d-170 мм шайба прозрачная с крышкой 210','Артикул: 17-0010', 6)
+			+product('img/goods/IMG_2302.png','Банка 1000 мл d-170 мм шайба прозрачная с крышкой 210','Артикул: 17-0010', 7)
+			+product('img/goods/IMG_2302-1.png','Банка 1000 мл d-170 мм шайба прозрачная с крышкой 210','Артикул: 17-0010', 8)
 	.form-bg
 		.container
 			.form.form--index
@@ -44,22 +44,31 @@ block scripts
 	script(src="js/maskedinput-fixed.js")
 	script(src="//api-maps.yandex.ru/2.1/?lang=ru_RU")
 	script.
-		ymaps.ready(function () {
-			var myMap = new ymaps.Map('map', {
-					center: [48.486370, 135.091787],
-					zoom: 15,
-					controls: []
-			}),
-			myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-					hintContent: "Центр упаковки",
-					balloonContent: 'text'
-			}, {
-					iconLayout: 'default#image',
-					iconImageHref: 'img/maplogo.png',
-					iconImageSize: [100, 100],
-					iconImageOffset: [-9, -40]
-			});
-			myMap.controls.add('zoomControl');
-			myMap.behaviors.disable('scrollZoom');
-			myMap.geoObjects.add(myPlacemark);
-		});
+		ymaps.ready(init);
+		var myMap,
+				coords = [[48.486370, 135.091787],[48.478173, 135.062304],[48.467500, 135.074406]],
+				data_map = [
+					'<span><b>Адрес: </b>г. Хабаровск, ул. Шевчука, 22</span>',
+					'<span><b>Адрес: </b>г. Хабаровск, ул. Шевчука, 22</span>',
+					'<span><b>Адрес: </b>г. Хабаровск, ул. Шевчука, 22</span>'
+				];
+		function init() {
+				myMap = new ymaps.Map('map', {
+						center: coords[0],
+						zoom: 13,
+						controls: []
+				});
+				for (var i = 0; i < coords.length; i++) {
+						var myPlacemark = new ymaps.Placemark(coords[i], {
+								balloonContent: data_map[i]
+						}, {
+								iconLayout: 'default#image',
+								iconImageHref: 'img/maplogo.png',
+								iconImageSize: [100, 100],
+								iconImageOffset: [-9, -40]
+						});
+						myMap.geoObjects.add(myPlacemark);
+				}
+				myMap.controls.add('zoomControl', {});
+				myMap.behaviors.disable('scrollZoom');
+		}

@@ -4,6 +4,7 @@ var gulp = require('gulp'),
 		pug = require('gulp-pug'),
 		cssnano = require('gulp-cssnano'),
 		imagemin = require('gulp-imagemin'),
+		svgmin = require('gulp-svgmin'),
 		sass = require('gulp-sass'),
 		plumber = require('gulp-plumber'),
 		errorHandler = require('gulp-plumber-error-handler'),
@@ -43,11 +44,23 @@ gulp.task('img-min', () =>
 		.pipe(gulp.dest('dist/img'))
 );
 
+gulp.task('svgmin', function () {
+	return gulp.src('app/img/icon/.svg')
+		.pipe(svgmin({
+				plugins: [
+					{removeDoctype: true},
+					{removeComments: true},
+					{metaData: true},
+					{cleanupNumericValues: {floatPrecision: 2}}
+				]
+			}
+		))
+		.pipe(gulp.dest('dist/img'));
+});
+
 gulp.task('browser-sync', function () {
 	browserSync({
-		server: {
-			baseDir: 'dist'
-		},
+		server: {baseDir: 'dist'},
 		port: 8080,
 		open: true,
 		notify: true
@@ -55,7 +68,7 @@ gulp.task('browser-sync', function () {
 });
 
 gulp.task('build-css', () =>
-	gulp.src('app/css/*.css')
+	gulp.src('dist/css/main.css')
 		.pipe(autoprefixer({
 			browsers: ['last 8 versions'],
 			cascade: true
